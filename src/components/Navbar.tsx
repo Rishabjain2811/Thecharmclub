@@ -5,6 +5,7 @@ import { siteConfig } from '../config/site'
 import { useCart } from '../context/CartContext'
 import { SearchModal } from './SearchModal'
 import { searchProducts } from '../data/products'
+import { assetPath } from '../utils/assetPath'
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -161,7 +162,7 @@ export const Navbar: React.FC = () => {
           <Link to="/" style={{ textDecoration: 'none' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? '6px' : '12px' }}>
               <img
-                src="/tcc.logo.png"
+                src={assetPath('/tcc.logo.png')}
                 alt={siteConfig.name}
                 style={{ 
                   width: isMobile ? '36px' : '48px', 
@@ -359,7 +360,7 @@ export const Navbar: React.FC = () => {
         }} id="mobile-navigation">
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 16px', borderBottom: '1px solid rgba(0,0,0,0.1)' }}>
             <img
-              src="/tcc.logo.png"
+              src={assetPath('/tcc.logo.png')}
               alt={siteConfig.name}
               style={{ 
                 width: '40px', 

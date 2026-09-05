@@ -3,6 +3,7 @@ import { Search, X } from 'lucide-react'
 import { searchProducts } from '../data/products'
 import { Link } from 'react-router-dom'
 import { formatPrice } from '../utils/whatsapp'
+import { assetPath } from '../utils/assetPath'
 
 interface SearchModalProps {
   isOpen: boolean
@@ -87,7 +88,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => 
                     alt={product.name}
                     className="w-16 h-16 object-cover rounded"
                     onError={(e) => {
-                      e.currentTarget.src = '/images/placeholder.svg'
+                      e.currentTarget.src = assetPath('/images/placeholder.svg')
                     }}
                   />
                   <div className="flex-1">

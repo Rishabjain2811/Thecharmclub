@@ -2,6 +2,7 @@ import React from 'react'
 import { X, Plus, Minus, Trash2 } from 'lucide-react'
 import { useCart } from '../context/CartContext'
 import { formatPrice, orderCartOnWhatsApp } from '../utils/whatsapp'
+import { assetPath } from '../utils/assetPath'
 
 interface CartDrawerProps {
   isOpen: boolean
@@ -64,7 +65,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose }) => {
                     alt={item.product.name}
                     className="w-20 h-20 object-cover rounded"
                     onError={(e) => {
-                      e.currentTarget.src = '/images/placeholder.svg'
+                      e.currentTarget.src = assetPath('/images/placeholder.svg')
                     }}
                   />
                   

@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { MessageCircle, MapPin, Phone } from 'lucide-react'
 import { siteConfig } from '../config/site'
+import { assetPath } from '../utils/assetPath'
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
@@ -63,7 +64,7 @@ export const Footer: React.FC = () => {
           {/* Brand */}
           <div>
             <img
-              src="/tcc.logo.png"
+              src={assetPath('/tcc.logo.png')}
               alt={siteConfig.name}
               style={{ 
                 width: '64px', 

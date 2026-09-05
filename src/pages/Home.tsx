@@ -6,6 +6,7 @@ import { getFeaturedProducts } from '../data/products'
 import type { Product } from '../data/products'
 import { ProductGrid } from '../components/ProductGrid'
 import { useCart } from '../context/CartContext'
+import { assetPath } from '../utils/assetPath'
 
 export const Home: React.FC = () => {
   const { addToCart } = useCart()
@@ -115,7 +116,7 @@ export const Home: React.FC = () => {
                   boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08)',
                 }}>
                   <video
-                    src="/reel.mp4"
+                    src={assetPath('/reel.mp4')}
                     autoPlay
                     muted
                     loop
@@ -180,7 +181,7 @@ export const Home: React.FC = () => {
                   boxShadow: '0 20px 40px rgba(0, 0, 0, 0.1)',
                 }}>
                   <video
-                    src="/reel.mp4"
+                    src={assetPath('/reel.mp4')}
                     autoPlay
                     muted
                     loop

@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { cn } from '../utils/cn'
+import { assetPath } from '../utils/assetPath'
 
 interface CategoryCardProps {
   name: string
@@ -29,7 +30,7 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
         alt={name}
         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         onError={(e) => {
-          e.currentTarget.src = '/images/placeholder.svg'
+          e.currentTarget.src = assetPath('/images/placeholder.svg')
         }}
       />
       

@@ -4,6 +4,7 @@ import { ShoppingCart, Eye, Plus, Minus } from 'lucide-react'
 import type { Product } from '../data/products'
 import { formatPrice } from '../utils/whatsapp'
 import { cn } from '../utils/cn'
+import { assetPath } from '../utils/assetPath'
 
 interface ProductCardProps {
   product: Product
@@ -52,7 +53,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           alt={product.name}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
           onError={(e) => {
-            e.currentTarget.src = '/images/placeholder.svg'
+            e.currentTarget.src = assetPath('/images/placeholder.svg')
           }}
         />
 
